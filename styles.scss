@@ -1,0 +1,66 @@
+@import "styles/bootstrap";
+
+.video-bg {
+	min-width: 100%;
+	max-width: 150%;
+}
+
+.site-title {
+	position: absolute;
+	top: 50%;
+	margin: 0 8px;
+	color: $white;
+
+	@include media-breakpoint-up(md) {
+		top: 55%;
+		margin: 0 32px;
+	}
+	@include media-breakpoint-up(xl) {
+		top: 60%;
+		margin: 0 64px;
+
+		h3 {
+			font-size: 4rem;
+		}
+		h6 {
+			font-size: 2.5rem;
+			font-weight: 300;
+		}
+	}
+}
+
+// ------ IMAGE MASKING -------------
+// If you want to create a patterned effect over an image, use a mask
+// it is important to give the maskable <img> the .img-maskable class
+// the .mask should then contain the content which should be displayed over the <img>
+// pair .mask with .bg-color or with a .pattern-TYPE class to create a neat effect.
+.img-maskable {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.mask {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  @each $color, $value in $theme-colors {
+    &.bg-#{$color} {
+      background-color: rgba($value, 0.7) !important;
+    }
+  }
+
+}
+.pattern-dots {
+  background: url(https://mdbootstrap.com/wp-content/themes/mdbootstrap4/img/overlays/01.png);
+}
+.pattern-dots-tight {
+  background: url(https://mdbootstrap.com/wp-content/themes/mdbootstrap4/img/overlays/06.png);
+}
+.pattern-dots-loose {
+  background: url(https://mdbootstrap.com/wp-content/themes/mdbootstrap4/img/overlays/02.png);
+}
+.pattern-hatch {
+  background: url(https://mdbootstrap.com/wp-content/themes/mdbootstrap4/img/overlays/07.png);
+}
