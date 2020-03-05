@@ -29,6 +29,14 @@
 	}
 }
 
+.img-fluid {
+	height: auto;
+
+	@include media-breakpoint-up(lg) {
+		height: 100%;
+	}
+}
+
 // ------ IMAGE MASKING -------------
 // If you want to create a patterned effect over an image, use a mask
 // it is important to give the maskable <img> the .img-maskable class

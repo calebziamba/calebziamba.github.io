@@ -7904,6 +7904,12 @@ a.text-dark:hover, a.text-dark:focus {
         font-size: 2.5rem;
         font-weight: 300; } }
 
+.img-fluid {
+  height: auto; }
+  @media (min-width: 992px) {
+    .img-fluid {
+      height: 100%; } }
+
 .img-maskable {
   position: absolute;
   height: 100%;
